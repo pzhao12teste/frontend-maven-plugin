@@ -25,7 +25,7 @@ cache:
 language: java
 matrix:
   include:
-  - jdk: oraclejdk7
+  - jdk: openjdk8
     os: linux
   - os: osx
 script:
