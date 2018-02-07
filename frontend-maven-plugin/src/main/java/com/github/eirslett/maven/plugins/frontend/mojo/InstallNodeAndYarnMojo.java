@@ -18,7 +18,7 @@ import com.github.eirslett.maven.plugins.frontend.lib.YarnInstaller;
 public final class InstallNodeAndYarnMojo extends AbstractFrontendMojo {
 
     /**
-     * Where to download Node.js binary from. Defaults to https://nodejs.org/dist/
+     * Where to download Node.js binary from. Defaults to http://nodejs.org/dist/
      */
     @Parameter(property = "nodeDownloadRoot", required = false,
         defaultValue = NodeInstaller.DEFAULT_NODEJS_DOWNLOAD_ROOT)
@@ -56,8 +56,8 @@ public final class InstallNodeAndYarnMojo extends AbstractFrontendMojo {
     /**
      * Skips execution of this mojo.
      */
-    @Parameter(property = "skip.installyarn", alias = "skip.installyarn", defaultValue = "${skip.installyarn}")
-    private boolean skip;
+    @Parameter(property = "skip.installyarn", alias = "skip.installyarn", defaultValue = "false")
+    private Boolean skip;
 
     @Component(role = SettingsDecrypter.class)
     private SettingsDecrypter decrypter;
