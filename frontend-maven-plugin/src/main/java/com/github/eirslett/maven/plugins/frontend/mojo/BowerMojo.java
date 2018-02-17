@@ -24,8 +24,8 @@ public final class BowerMojo extends AbstractFrontendMojo {
     /**
      * Skips execution of this mojo.
      */
-    @Parameter(property = "skip.bower", defaultValue = "${skip.bower}")
-    private boolean skip;
+    @Parameter(property = "skip.bower", defaultValue = "false")
+    private Boolean skip;
 
     @Parameter(property = "session", defaultValue = "${session}", readonly = true)
     private MavenSession session;
@@ -51,7 +51,7 @@ public final class BowerMojo extends AbstractFrontendMojo {
         if (bowerInheritsProxyConfigFromMaven) {
             return MojoUtils.getProxyConfig(session, decrypter);
         } else {
-            getLog().info("bower not inheriting proxy config from Maven");
+            getLog().info("npm not inheriting proxy config from Maven");
             return new ProxyConfig(Collections.<ProxyConfig.Proxy>emptyList());
         }
     }

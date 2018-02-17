@@ -9,7 +9,7 @@
 
     <groupId>com.github.eirslett</groupId>
     <artifactId>frontend-plugins</artifactId>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -75,7 +75,7 @@
             <extension>
                 <groupId>edu.illinois</groupId>
                 <artifactId>incremental-builder-with-ekstazi</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.4</version>
             </extension>
         </extensions>
     </build>
